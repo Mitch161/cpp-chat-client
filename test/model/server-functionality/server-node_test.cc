@@ -32,3 +32,16 @@ TEST_F(ServerNodeTest, GetNameDoubleTest) {
   EXPECT_EQ(server_one->GetName(), name_one);
   EXPECT_EQ(server_two->GetName(), name_two);
 }
+
+TEST_F(ServerNodeTest, GetNameConstant) {
+  std::string name = "mitch";
+  ServerNode tmp_server(name);
+
+  EXPECT_EQ(tmp_server.GetName(), name);
+
+  name = "bob";
+  EXPECT_NE(tmp_server.GetName(), name);
+
+  name = "mitch";
+  EXPECT_EQ(tmp_server.GetName(), name);
+}
