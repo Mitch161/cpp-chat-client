@@ -6,11 +6,29 @@
 
 using namespace model_server_functionality;
 
-class ServerNodeTest : public ::testing::Test {};
+class ServerNodeTest : public ::testing::Test {
+ public:
+  ServerNodeTest() {
+    name_one = "test server";
+    name_two = "micky server";
+
+    server_one = new ServerNode(name_one);
+    server_two = new ServerNode(name_two);
+  }
+
+ protected:
+  std::string name_one;
+  std::string name_two;
+
+  ServerNode *server_one;
+  ServerNode *server_two;
+};
 
 TEST_F(ServerNodeTest, GetNameTest) {
-  ServerNode server_one;
-  std::string name_one = "test server";
+  EXPECT_EQ(server_one->GetName(), name_one);
+}
 
-  EXPECT_EQ(server_one.GetName(), name_one);
+TEST_F(ServerNodeTest, GetNameDoubleTest) {
+  EXPECT_EQ(server_one->GetName(), name_one);
+  EXPECT_EQ(server_two->GetName(), name_two);
 }
