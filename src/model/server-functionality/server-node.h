@@ -5,7 +5,12 @@
 
 namespace model_server_functionality {
 class ServerNode {
+ private:
+  std::string name;
+
  public:
+  ServerNode(const std::string &name);
+
   std::string GetName();
 };
 }  // namespace model_server_functionality

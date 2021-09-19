@@ -4,4 +4,6 @@
 
 using namespace model_server_functionality;
 
-std::string ServerNode::GetName() { return "test server"; }
+ServerNode::ServerNode(const std::string &name) { this->name = name; }
+
+std::string ServerNode::GetName() { return name; }
