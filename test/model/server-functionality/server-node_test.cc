@@ -84,3 +84,16 @@ TEST_F(ServerNodeTest, GetOwnerDouble) {
   EXPECT_EQ(server_one->GetOwner(), owner_one);
   EXPECT_EQ(server_two->GetOwner(), owner_two);
 }
+
+TEST_F(ServerNodeTest, GetOwnerConstant) {
+  std::string owner = "mitch";
+  ServerNode tmp_server(name_one, owner);
+
+  EXPECT_EQ(tmp_server.GetOwner(), owner);
+
+  owner = "bob";
+  EXPECT_NE(tmp_server.GetOwner(), owner);
+
+  owner = "mitch";
+  EXPECT_EQ(tmp_server.GetOwner(), owner);
+}
