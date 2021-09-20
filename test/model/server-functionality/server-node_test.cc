@@ -62,3 +62,9 @@ TEST_F(ServerNodeTest, GetNameMany) {
 TEST_F(ServerNodeTest, GetNameNotEqual) {
   EXPECT_NE(server_one->GetName(), server_two->GetName());
 }
+
+TEST_F(ServerNodeTest, GetNameEqual) {
+  ServerNode *tmp_server = new ServerNode(name_one);
+
+  EXPECT_EQ(server_one->GetName(), tmp_server->GetName());
+}
