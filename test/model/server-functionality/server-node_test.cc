@@ -98,7 +98,7 @@ TEST_F(ServerNodeTest, GetOwnerConstant) {
   EXPECT_EQ(tmp_server.GetOwner(), owner);
 }
 
-TEST_F(ServerNodeTest, GetUuidMany) {
+TEST_F(ServerNodeTest, GetOwnerMany) {
   ServerNode *server_array[20];
 
   for (int index = 0; index < 20; ++index) {
@@ -111,6 +111,12 @@ TEST_F(ServerNodeTest, GetUuidMany) {
   }
 }
 
-TEST_F(ServerNodeTest, GetUuidNotEqual) {
+TEST_F(ServerNodeTest, GetOwnerNotEqual) {
   EXPECT_NE(server_one->GetOwner(), server_two->GetOwner());
+}
+
+TEST_F(ServerNodeTest, GetOwnerEqual) {
+  ServerNode *tmp_server = new ServerNode(name_one, owner_one);
+
+  EXPECT_EQ(server_one->GetOwner(), tmp_server->GetOwner());
 }
