@@ -12,6 +12,8 @@ class ServerNode {
   ServerNode(const std::string &name);
 
   std::string GetName();
+
+  std::string GetOwner();
 };
 }  // namespace model_server_functionality
 
