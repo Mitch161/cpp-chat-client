@@ -68,3 +68,8 @@ TEST_F(ServerNodeTest, GetNameEqual) {
 
   EXPECT_EQ(server_one->GetName(), tmp_server->GetName());
 }
+
+TEST_F(ServerNodeTest, GetOwner) {
+  std::string owner = "mitch";
+  EXPECT_EQ(server_one->GetOwner(), owner);
+}
