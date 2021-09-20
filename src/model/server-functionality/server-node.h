@@ -7,9 +7,10 @@ namespace model_server_functionality {
 class ServerNode {
  private:
   std::string name;
+  std::string owner;
 
  public:
-  ServerNode(const std::string &name);
+  ServerNode(const std::string &name, const std::string &owner);
 
   std::string GetName();
 
