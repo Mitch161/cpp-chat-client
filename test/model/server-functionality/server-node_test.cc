@@ -110,3 +110,7 @@ TEST_F(ServerNodeTest, GetUuidMany) {
     EXPECT_EQ(server_array[index]->GetOwner(), std::to_string(index));
   }
 }
+
+TEST_F(ServerNodeTest, GetUuidNotEqual) {
+  EXPECT_NE(server_one->GetOwner(), server_two->GetOwner());
+}
