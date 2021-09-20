@@ -97,3 +97,16 @@ TEST_F(ServerNodeTest, GetOwnerConstant) {
   owner = "mitch";
   EXPECT_EQ(tmp_server.GetOwner(), owner);
 }
+
+TEST_F(ServerNodeTest, GetUuidMany) {
+  ServerNode *server_array[20];
+
+  for (int index = 0; index < 20; ++index) {
+    std::string owner = std::to_string(index);
+    server_array[index] = new ServerNode(name_one, owner);
+  }
+
+  for (int index = 0; index < 20; ++index) {
+    EXPECT_EQ(server_array[index]->GetOwner(), std::to_string(index));
+  }
+}
