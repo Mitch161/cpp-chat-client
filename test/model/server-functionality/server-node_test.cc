@@ -45,3 +45,16 @@ TEST_F(ServerNodeTest, GetNameConstant) {
   name = "mitch";
   EXPECT_EQ(tmp_server.GetName(), name);
 }
+
+TEST_F(ServerNodeTest, GetNameMany) {
+  ServerNode *server_array[20];
+
+  for (int index = 0; index < 20; ++index) {
+    std::string name = std::to_string(index);
+    server_array[index] = new ServerNode(name);
+  }
+
+  for (int index = 0; index < 20; ++index) {
+    EXPECT_EQ(server_array[index]->GetName(), std::to_string(index));
+  }
+}
