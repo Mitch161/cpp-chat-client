@@ -58,3 +58,7 @@ TEST_F(ServerNodeTest, GetNameMany) {
     EXPECT_EQ(server_array[index]->GetName(), std::to_string(index));
   }
 }
+
+TEST_F(ServerNodeTest, GetNameNotEqual) {
+  EXPECT_NE(server_one->GetName(), server_two->GetName());
+}
