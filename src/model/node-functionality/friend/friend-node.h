@@ -1,9 +1,9 @@
-#ifndef CPPCHATCLIENT_MODEL_FRIENDFUNCTIONALITY_FRIENDNODE_
-#define CPPCHATCLIENT_MODEL_FRIENDFUNCTIONALITY_FRIENDNODE_
+#ifndef MODEL_NODE_FUNCTIONALITY_FRIEND_FRIEND_NODE_H_
+#define MODEL_NODE_FUNCTIONALITY_FRIEND_FRIEND_NODE_H_
 
 #include <string>
 
-namespace chat_client_model_friend_functionality {
+namespace model_node_functionality_friend {
 class FriendNode {
  private:
   std::string uuid;
@@ -17,6 +17,6 @@ class FriendNode {
 
   std::string GetName();
 };
-}  // namespace chat_client_model_friend_functionality
+}  // namespace model_node_functionality_friend
 
 #endif

@@ -2,14 +2,21 @@ set(BINARY ${CMAKE_PROJECT_NAME})
 
 set(SOURCES
     main.cc
+    
     controller/client-controller.cc
     controller/view-factory.cc
     controller/addfriend-observer.cc
     controller/deletefriend-observer.cc
+    
     model/client-model.cc
-    model/friend-functionality/friend-hashmap.cc
-    model/friend-functionality/friend-node.cc
-    model/friend-functionality/friend-utility.cc
+
+    model/node-functionality/node-hashmap.cc
+    model/node-functionality/node-utility.cc
+
+    model/node-functionality/friend/friend-node.cc
+
+    model/node-functionality/server/server-node.cc
+    
     view/gui-view.cc
 )
 

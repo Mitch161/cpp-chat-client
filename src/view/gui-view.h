@@ -6,8 +6,8 @@
 #include <memory>
 #include <string>
 
-#include "../model/friend-functionality/friend-node.h"
-#include "../view/view.h"
+#include "../model/node-functionality/friend/friend-node.h"
+#include "view.h"
 
 namespace chat_client_view {
 class GuiView : public View {
@@ -32,7 +32,7 @@ class GuiView : public View {
   std::string GetInputUuidToDelete();
 
   void AddFriendToFriendList(
-      std::shared_ptr<chat_client_model_friend_functionality::FriendNode>);
+      std::shared_ptr<model_node_functionality_friend::FriendNode>);
 
   void RemoveFriendFromFriendList(const std::string &);
 

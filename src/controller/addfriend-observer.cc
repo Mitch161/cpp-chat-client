@@ -20,8 +20,9 @@ AddFriendObserver::AddFriendObserver(shared_ptr<ClientModel> model,
 
 void AddFriendObserver::Execute() {
   string uuid = view->GetInputUuidToAdd();
+  string owner = "mitch_tmp";
 
-  if (model->AddFriend(uuid)) {
+  if (model->AddFriend(uuid, owner)) {
     shared_ptr<FriendNode> friend_node = model->GetFriend(uuid);
     view->AddFriendToFriendList(friend_node);
     return;

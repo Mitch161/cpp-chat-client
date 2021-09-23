@@ -5,7 +5,7 @@
 #include <string>
 
 #include "../controller/observer.h"
-#include "../model/friend-functionality/friend-node.h"
+#include "../model/node-functionality/friend/friend-node.h"
 
 namespace chat_client_view {
 
@@ -18,7 +18,7 @@ class View {
   virtual std::string GetInputUuidToDelete() = 0;
 
   virtual void AddFriendToFriendList(
-      std::shared_ptr<chat_client_model_friend_functionality::FriendNode>) = 0;
+      std::shared_ptr<model_node_functionality_friend::FriendNode>) = 0;
   virtual void RemoveFriendFromFriendList(const std::string&) = 0;
 
   virtual void AddObserverAddFriendButton(

@@ -1,9 +1,9 @@
-#ifndef MODEL_SERVER_FUNCTIONALITY_SERVER_NODE_H_
-#define MODEL_SERVER_FUNCTIONALITY_SERVER_NODE_H_
+#ifndef MODEL_NODE_FUNCTIONALITY_SERVER_SERVER_NODE_H_
+#define MODEL_NODE_FUNCTIONALITY_SERVER_SERVER_NODE_H_
 
 #include <string>
 
-namespace model_server_functionality {
+namespace model_node_functionality_server {
 class ServerNode {
  private:
   std::string name;
@@ -16,6 +16,6 @@ class ServerNode {
 
   std::string GetOwner();
 };
-}  // namespace model_server_functionality
+}  // namespace model_node_functionality_server
 
 #endif

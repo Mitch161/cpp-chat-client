@@ -2,7 +2,7 @@
 
 #include <string>
 
-using namespace model_server_functionality;
+using namespace model_node_functionality_server;
 
 ServerNode::ServerNode(const std::string &name, const std::string &owner) {
   this->name = name;
