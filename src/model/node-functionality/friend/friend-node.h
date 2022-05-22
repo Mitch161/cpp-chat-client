@@ -2,16 +2,12 @@
 #define MODEL_NODE_FUNCTIONALITY_FRIEND_FRIEND_NODE_H_
 
 #include <string>
+#include "../node.h"
 
 namespace model_node_functionality_friend {
-class FriendNode {
- private:
-  std::string uuid;
-  std::string name;
-
+class FriendNode : public model_node_functionality::Node {
  public:
-  FriendNode(){};
-  FriendNode(const std::string&, const std::string&);
+  FriendNode(const std::string &uuid, const std::string &name) : model_node_functionality::Node(uuid, name) {}
 
   std::string GetUuid();
 

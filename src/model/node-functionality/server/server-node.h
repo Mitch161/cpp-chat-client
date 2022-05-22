@@ -3,14 +3,19 @@
 
 #include <string>
 
+#include "../node.h"
+
 namespace model_node_functionality_server {
-class ServerNode {
+class ServerNode : public model_node_functionality::Node {
  private:
-  std::string name;
   std::string owner;
 
  public:
-  ServerNode(const std::string &name, const std::string &owner);
+  ServerNode(const std::string &uuid, const std::string &name, const std::string &owner) : model_node_functionality::Node(uuid, name) {
+    this->owner = owner;
+  }
+
+  std::string GetUuid();
 
   std::string GetName();
 
